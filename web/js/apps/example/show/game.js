@@ -53,16 +53,16 @@ define([
         });
 
         if ($.inArray('right', this.keyboard.activeKeys()) > -1) {
-            this.camera.position.x += 2;
+            this.camera.position.x += 4;
         }
         if ($.inArray('left', this.keyboard.activeKeys()) > -1) {
-            this.camera.position.x -= 2;
+            this.camera.position.x -= 4;
         }
         if ($.inArray('up', this.keyboard.activeKeys()) > -1) {
-            this.camera.position.y += 2;
+            this.camera.position.y += 4;
         }
         if ($.inArray('down', this.keyboard.activeKeys()) > -1) {
-            this.camera.position.y -= 2;
+            this.camera.position.y -= 4;
         }
 
         if (!this.textShown) {
@@ -91,7 +91,7 @@ define([
         elapsed = t - this.lastTime;
         ready = false;
 
-        if (elapsed > 225) {
+        if (elapsed > 50) {
             this.lastTime = t;
             ready = true;
         }
@@ -125,9 +125,9 @@ define([
         
         mesh = new THREE.Mesh(geometry, material);
         mesh.receiveShadow = false;
-        mesh.position.x = Math.floor(Math.random() * 1000) - 500;
-        mesh.position.y = Math.floor(Math.random() * 1000) - 500;
-        mesh.position.z = -2000;
+        mesh.position.x = Math.floor(Math.random() * 2000) - 1000;
+        mesh.position.y = Math.floor(Math.random() * 2000) - 1000;
+        mesh.position.z = -2500;
 
         mesh.rotation.z = this.getRandomQuadrantAngle();
 

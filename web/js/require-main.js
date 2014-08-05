@@ -33,6 +33,7 @@
             'marionette-transitions': '../vendor/marionette-transitions/marionette-transitions',
             modernizr: '../vendor/modernizr/modernizr',
             polyfillLocationOrigin: '../vendor/polyfillLocationOrigin/lib/polyfillLocationOrigin',
+            seamlessloop: '../vendor/seamlessloop/index',
             text: '../vendor/requirejs-text/text',
             twitter: '../vendor/twitter/index',
             underscore: '../vendor/underscore/underscore',
@@ -52,6 +53,9 @@
             hbars: ['text', 'Handlebars'],
             modernizr: {
                 exports: 'Modernizr'
+            },
+            seamlessloop: {
+                exports: 'SeamlessLoop'
             },
             twitter: {
                 exports: 'twttr'
