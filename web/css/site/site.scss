@@ -3,3 +3,11 @@
 *:after {
     @include box-sizing(border-box);
 }
+
+.logo {
+    @include position(absolute, 20px 20px);
+    @include size(150px 150px);
+    background-image: url('/img/logo.png');
+    background-size: 150px 150px;
+    display: block;
+}

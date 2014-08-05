@@ -5,6 +5,11 @@
     define('ga', function() {
         return window.ga;
     });
+
+    define('THREE', function() {
+        return window.THREE;
+    });
+
     requirejs.config({
         paths: {
             backbone: '../vendor/backbone/backbone',
@@ -20,6 +25,7 @@
             Handlebars: '../vendor/handlebars/handlebars',
             hbars: '../vendor/requirejs-handlebars/hbars',
             jquery: '../vendor/jquery/dist/jquery',
+            keyboardjs: '../vendor/keyboardjs/index',
             marionette: '../vendor/backbone.marionette/lib/core/backbone.marionette',
             'marionette.babyBird': '../vendor/marionette.babyBird/lib/marionette.babyBird',
             'marionette.enhancedController': '../vendor/marionette.enhancedController/lib/marionette.enhancedController',

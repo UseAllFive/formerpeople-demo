@@ -1,8 +1,8 @@
 define([
     'app',
-    'hbars!apps/example/show/templates/layout',
-    'hbars!apps/example/show/templates/item'
-], function(App, layoutTemplate, itemTemplate) {
+    'apps/example/show/game',
+    'hbars!apps/example/show/templates/layout'
+], function(App, Game, layoutTemplate) {
     App.module('ExampleApp.Show.View', function(View, App, Backbone, Marionette, $, _) {
 
         View.Layout = Marionette.LayoutView.extend({
@@ -12,11 +12,12 @@ define([
 
             className: 'example-app',
 
-            template: layoutTemplate
-        });
+            template: layoutTemplate,
 
-        View.Item = Marionette.ItemView.extend({
-            template: itemTemplate
+            initialize: function() {
+                var game = new Game();
+                game.animate();
+            }
         });
     });
 

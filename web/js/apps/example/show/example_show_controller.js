@@ -34,12 +34,6 @@ define([
                 _.delay(deferred.resolve, SIMULATED_FETCH_DELAY);
 
                 return model;
-            },
-
-            showItemView: function() {
-                var view = new View.Item();
-
-                this.layout.bodyRegion.show(view);
             }
         });
     });

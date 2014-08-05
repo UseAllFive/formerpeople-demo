@@ -3,12 +3,14 @@
 {% block body %}
     {% include 'svgs.html' %}
 
+    <a class="logo" href="/"></a>
+
     <!-- Regions -->
     <div class="example-region"></div>
     <!-- /Regions -->
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
     {% if config['ENV'] == 'DEV' %}
-    <script src="/js/livereload.js"></script>
     <script async data-main="/js/require-main.js" src="/vendor/requirejs/require.js"></script>
     {% else %}
     <script async data-main="/build/require-main.js" src="/vendor/requirejs/require.js"></script>
